@@ -1,3 +1,4 @@
+import 'package:easy_locale/translations/codegen_loader.g.dart';
 import 'package:easy_locale/translations/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,8 @@ void main() async {
     EasyLocalization(
       supportedLocales: [Locale('en'), Locale('ar')],
       path: 'assets/translations',
-      fallbackLocale: Locale('en'),
+      fallbackLocale:  Locale('en'),
+      assetLoader: CodegenLoader(),
       child: MyApp(),
     ),
   );
